@@ -5,7 +5,10 @@
     <b-container class="bv-example-row">
       <b-row>
         <b-col sm="6" offset="3">
-           <QuestionBox />
+            <QuestionBox
+              v-if="questions.length"
+              :currentQuestion="questions[index]"
+            />
         </b-col>
       </b-row>
     </b-container>
@@ -24,7 +27,8 @@
     },
     data() {
       return {
-        questions: []
+        questions: [],
+        index: 0
       }
     },
     mounted: function() {
