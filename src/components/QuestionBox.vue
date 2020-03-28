@@ -12,7 +12,7 @@
       </p>
 
       <b-button variant="primary" href="#" class="m-2">Submit</b-button>
-      <b-button variant="success" href="#" class="m-2">Next</b-button>
+      <b-button @click="next" variant="success" href="#" class="m-2">Next</b-button>
     </b-jumbotron>
   </div>
 </template>
@@ -20,7 +20,8 @@
 <script>
   export default {
     props: {
-      currentQuestion: Object
+      currentQuestion: Object,
+      next: Function
     }
   }
 </script>
